@@ -1,6 +1,8 @@
+// eslint-disable-next-line 
+
 import React from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineEye } from "react-icons/ai";
+// import { Link } from "react-router-dom";
+// import { AiOutlineEye } from "react-icons/ai";
 
 const MyOrders = () => {
   const arr = [1, 2, 3, 4];
@@ -21,8 +23,8 @@ const MyOrders = () => {
           </thead>
 
           <tbody>
-//     Add the code for the table body
-           
+{/* //     Add the code for the table body
+            */}
           </tbody>
         </table>
       </main>
