@@ -30,6 +30,7 @@ import "./styles/profile.scss";
 import "./styles/table.scss";
 import "./styles/orderDetails.scss";
 import "./styles/about.scss";
+import Menu from "./components/home/Menu";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/menu"  element={<Menu />} />
         <Route path="/me" element={<Profile />} />
         <Route path="/myOrder" element={<MyOrders />} />
         <Route path="/order/:id" element={<OrderDetails />} />        

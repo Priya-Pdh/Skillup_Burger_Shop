@@ -1,12 +1,14 @@
-// Write all the code here
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <div>
-      my home
+      <h1>Welcome to My Burger Shop!</h1>
+      <p>Explore our menu and place your order.</p>
+      <Link to="/menu">View Menu</Link>
     </div>
-  )
+  );
 }
 
 export default Home;
