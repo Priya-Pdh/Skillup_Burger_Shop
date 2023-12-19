@@ -1,28 +1,31 @@
 // Write all the code here
 import React from 'react';
 import MenuCard from './MenuCard'; 
+import burger1 from '../../assets/burger1.png';
+import burger2 from '../../assets/burger2.png';
+import burger3 from '../../assets/burger3.png';
 
 const Menu = () => {
   // Sample menu items data
   const menuItems = [
     {
       id: 1,
-      imageSrc: '../../assets/burger1.png',
+      imageSrc: burger1,
       title: 'Burger Deluxe',
       price: 9.99,
     },
     {
       id: 2,
-      imageSrc: '../../assets/burger2.png',
+      imageSrc: burger2,
       title: 'Cheeseburger',
       price: 8.49,
     },
     {
       id: 3,
-      imageSrc: '../../assets/burger3.png',
+      imageSrc: burger3,
       title: 'Max Burger',
       price: 7.55,
-    }
+    },
   ];
 
   // Function handler for adding to cart
