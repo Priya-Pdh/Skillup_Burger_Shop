@@ -1,5 +1,5 @@
 
-Burger Shop - Online Ordering System 🍔
+# Burger Shop - Online Ordering System 🍔
 
 # Overview
 This project is an online ordering system for a burger-selling business built using React.js. Users can explore the menu, place orders, and track their order history.
