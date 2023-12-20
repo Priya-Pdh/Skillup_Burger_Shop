@@ -20,7 +20,7 @@ const About = () => {
         <h2>Founder</h2>
         <article>
             <div>
-        <img src={founderPic} alt="founder-picture" />
+        <img src={founderPic} alt="pic" />
        <h3>Nelson</h3>
         </div>
         <p>I am Nelson, the founder of Burger Shop. Affiliated to God Taste.</p>
