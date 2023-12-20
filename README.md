@@ -39,3 +39,6 @@ Run Application: Start the development server with npm start.
 # Usage
 Explore different pages and features for a virtual burger shopping experience. Place orders, provide feedback, and enjoy!
 
+# Live 🎉
+https://onlineburgershop-priya.netlify.app/ 
+
