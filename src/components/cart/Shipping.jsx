@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Country, State } from 'country-state-city';
 import Popup from 'reactjs-popup';
+import { Link } from 'react-router-dom';
 
 const Shipping = () => {
   // State variables to store selected country and state
@@ -58,7 +59,7 @@ const Shipping = () => {
             <input type="number" placeholder="Enter Phone Number" />
           </div>
           {/* Add the code for contact */}
-          <Popup trigger={<button type="button">Confirm Order</button>} position="right center">
+          <Popup trigger={<button type="button"><Link to="/myOrder">Confirm Order</Link></button>} position="right center">
             <div
               style={{
                 color: 'red',
