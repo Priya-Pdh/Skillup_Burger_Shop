@@ -4,6 +4,7 @@ import MenuCard from './MenuCard';
 import burger1 from '../../assets/burger1.png';
 import burger2 from '../../assets/burger2.png';
 import burger3 from '../../assets/burger3.png';
+import { Link } from 'react-router-dom';
 
  // Sample menu items data
 export const menuItems = [
@@ -38,6 +39,7 @@ const Menu = () => {
   return (
     <div>
       <h2>Explore Menu</h2>
+      <p><Link to="/cart">cart</Link></p>
       <div>
         {menuItems.map((item) => (
           <MenuCard
