@@ -5,28 +5,29 @@ import burger1 from '../../assets/burger1.png';
 import burger2 from '../../assets/burger2.png';
 import burger3 from '../../assets/burger3.png';
 
+ // Sample menu items data
+export const menuItems = [
+  {
+    id: 1,
+    imageSrc: burger1,
+    title: 'Burger Deluxe',
+    price: 9.99,
+  },
+  {
+    id: 2,
+    imageSrc: burger2,
+    title: 'Cheeseburger',
+    price: 8.49,
+  },
+  {
+    id: 3,
+    imageSrc: burger3,
+    title: 'Max Burger',
+    price: 7.55,
+  },
+];
+
 const Menu = () => {
-  // Sample menu items data
-  const menuItems = [
-    {
-      id: 1,
-      imageSrc: burger1,
-      title: 'Burger Deluxe',
-      price: 9.99,
-    },
-    {
-      id: 2,
-      imageSrc: burger2,
-      title: 'Cheeseburger',
-      price: 8.49,
-    },
-    {
-      id: 3,
-      imageSrc: burger3,
-      title: 'Max Burger',
-      price: 7.55,
-    },
-  ];
 
   // Function handler for adding to cart
   const addToCartHandler = (item) => {

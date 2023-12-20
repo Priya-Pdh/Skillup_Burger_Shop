@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import burger1 from "../../assets/burger1.png";
 import burger2 from "../../assets/burger2.png";
-// import burger3 here
+import burger3 from "../../assets/burger3.png";
 
 const CartItem = ({ value, title, img, increment, decrement }) => (
   <div className="cartItem">
@@ -20,42 +20,50 @@ const CartItem = ({ value, title, img, increment, decrement }) => (
 );
 
 const Cart = () => {
-  const increment = (item) => {};
+  const [items, setItems] = useState([
+    { id: 1, title: "Cheese Burger", img: burger1, amount: 0 },
+    { id: 2, title: "Veg Cheese Burger", img: burger2, amount: 0 },
+    { id: 3, title: "Cheese Burger with French Fries", img: burger3, amount: 0 },
+  ]);
 
-  const decrement = (item) => {};
+  const increment = (itemId) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId ? { ...item, amount: item.amount + 1 } : item
+      )
+    );
+  };
+
+  const decrement = (itemId) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === itemId ? { ...item, amount: Math.max(0, item.amount - 1) } : item
+      )
+    );
+  };
 
   return (
     <section className="cart">
       <main>
-        <CartItem
-          title={"Cheese Burger"}
-          img={burger1}
-          value={0}
-          increment={() => increment(1)}
-
-        // Add the function for decrementing the order by 1 
-       
-        />
-        <CartItem
-          title={"Veg Cheese Burger"}
-          img={burger2}
-          value={0}
-          increment={() => increment(2)}
-        // Add the function for decrementing the order by 2
-       
-        />
-
-        {/* Fill up the code for Cheese Burger similarly */}
-       
+        {items.map((item) => (
+          <CartItem
+            key={item.id}
+            title={item.title}
+            img={item.img}
+            value={item.amount}
+            increment={() => increment(item.id)}
+            decrement={() => decrement(item.id)}
+          />
+        ))}
 
         <article>
           <div>
             <h4>Sub Total</h4>
-            <p>₹{2000}</p>
+            <p>₹{items.reduce((total, item) => total + item.amount, 0)}</p>
           </div>
           <div>
             <h4>Tax</h4>
-            <p>₹{2000 * 0.18}</p>
+            <p>₹{items.reduce((total, item) => total + item.amount * 0.18, 0)}</p>
           </div>
           <div>
             <h4>Shipping Charges</h4>
@@ -63,7 +71,9 @@ const Cart = () => {
           </div>{" "}
           <div>
             <h4>Total</h4>
-            <p>₹{2000 + 2000 * 0.18 + 200}</p>
+            <p>
+              ₹{items.reduce((total, item) => total + item.amount * (1 + 0.18), 200)}
+            </p>
           </div>
           <Link to="/shipping">Checkout</Link>
         </article>
