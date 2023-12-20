@@ -1,34 +1,30 @@
-// Write all the code here
 import React from 'react';
 import MenuCard from './MenuCard'; 
 import burger1 from '../../assets/burger1.png';
 import burger2 from '../../assets/burger2.png';
 import burger3 from '../../assets/burger3.png';
-import { Link } from 'react-router-dom';
-
- // Sample menu items data
-export const menuItems = [
-  {
-    id: 1,
-    imageSrc: burger1,
-    title: 'Burger Deluxe',
-    price: 9.99,
-  },
-  {
-    id: 2,
-    imageSrc: burger2,
-    title: 'Cheeseburger',
-    price: 8.49,
-  },
-  {
-    id: 3,
-    imageSrc: burger3,
-    title: 'Max Burger',
-    price: 7.55,
-  },
-];
 
 const Menu = () => {
+  const menuItems = [
+    {
+      id: 1,
+      imageSrc: burger1,
+      title: 'Burger Deluxe',
+      price: 9.99,
+    },
+    {
+      id: 2,
+      imageSrc: burger2,
+      title: 'Cheeseburger',
+      price: 8.49,
+    },
+    {
+      id: 3,
+      imageSrc: burger3,
+      title: 'Max Burger',
+      price: 7.55,
+    },
+  ];
 
   // Function handler for adding to cart
   const addToCartHandler = (item) => {
@@ -37,8 +33,8 @@ const Menu = () => {
   };
 
   return (
-    <div>
-      <h2>Explore Menu</h2>
+    <div id="menu">
+      <h1>Explore Menu</h1>
       <div>
         {menuItems.map((item) => (
           <MenuCard

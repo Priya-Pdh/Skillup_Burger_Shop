@@ -9,6 +9,9 @@ const Header = () => {
         <div>
           <Link to ="/cart" className='a'><FaCartArrowDown /></Link>
           <Link to="/" className='a'>Home</Link>
+          <Link to="/about" className='a'>About us</Link>
+          <Link to="/contact" className='a'>Contact us</Link>
+          <Link to="/login" className='a'>Login</Link>
         </div>
           
       </nav>

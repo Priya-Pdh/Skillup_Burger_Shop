@@ -55,9 +55,11 @@ const Shipping = () => {
           <div>
             <label>Pin Code</label>
             <input type="number" placeholder="Enter Pincode" />
+          </div>
+          <div>
             <label>Phone Number</label>
             <input type="number" placeholder="Enter Phone Number" />
-          </div>
+            </div>
           {/* Add the code for contact */}
           <Popup trigger={<button type="button"><Link to="/myOrder">Confirm Order</Link></button>} position="right center">
             <div
