@@ -39,7 +39,6 @@ const Menu = () => {
   return (
     <div>
       <h2>Explore Menu</h2>
-      <p><Link to="/cart">cart</Link></p>
       <div>
         {menuItems.map((item) => (
           <MenuCard
